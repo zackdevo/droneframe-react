@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800;900&family=Rhodium+Libre");
+body {
+  background: linear-gradient(rgba(121, 125, 114, 0.20), rgba(46, 13, 62, 0.30));
+  color: rgba(125, 119, 114, 0.8);
+  font-family: 'Catamaran', sans-serif;
+  font-size: 100%;
+  margin: 0px;
+}
+.logo-site {
+    width: 150px;
+}
+
+/* HOVER & ANIMS */
+
+.navLinks {
+    font-size: 1.2rem;
+}
+
+.navLinks, .headerLink {
+    margin: 0 40px;
+    transition: 300ms;
+    color:rgba(125, 119, 114, 0.8);
+    text-decoration: none;
+}
+.navLinks:hover, .headerLink:hover {
+    color: #c080c0;
+}
+
+.fading-1 {
+    background: 
+       linear-gradient(90deg, transparent, #c080c0, transparent) 
+      bottom /var(--d, 0) 2px no-repeat;
+    transition: 0.2s;
+  }
+  .fading-1:hover {
+    --d: 100%;
+}
+
+.favButton:hover svg, .searchBtn:hover svg {
+    fill: #c080c0;
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);} 
+    10%, 30%, 50%, 70%, 90% {transform: translateX(0px);} 
+    20%, 40%, 60%, 80% {transform: translateX(3px);} 
+ }
