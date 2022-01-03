@@ -2,7 +2,7 @@ import { Container, Box, Grid, IconButton, Typography, Divider, Button } from "@
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { getProducts } from "../data"
+import { getProducts } from "../../data"
 
 const BestSells = () => {
 

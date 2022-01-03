@@ -1,5 +1,5 @@
 import { Container, Grid, Typography } from "@mui/material";
-import newsLetterImage from "../images/drone-10-min_auto_x2.jpg";
+import newsLetterImage from "../../images/drone-10-min_auto_x2.jpg";
 import NewsForm from "./NewsForm";
 
 const NewsLetter = () => {

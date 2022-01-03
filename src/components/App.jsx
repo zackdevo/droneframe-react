@@ -1,10 +1,10 @@
 import "../styles/mainStyle.css";
 import { Component } from "react";
-import Nav from "./Nav";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "../pages/home";
 import Shop from "../pages/shop";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
+import Nav from "./navigation/Nav";
 
 class App extends Component {
   state = {

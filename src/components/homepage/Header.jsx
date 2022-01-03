@@ -1,6 +1,6 @@
 import { Box } from "@mui/system"
 import { Link } from "react-router-dom"
-import bgImage from "../images/bg-header.jpg"
+import bgImage from "../../images/bg-header.jpg"
 
 const Header = () => {
     const headerStyle = {

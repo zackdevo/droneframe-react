@@ -1,7 +1,7 @@
 import { Container, Grid, Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import equipImage from "../images/equipment2-min.jpg";
-import serviceImage from "../images/services-min.jpg";
+import equipImage from "../../images/equipment2-min.jpg";
+import serviceImage from "../../images/services-min.jpg";
 
 const Gamme = () => {
     const catStyle = {

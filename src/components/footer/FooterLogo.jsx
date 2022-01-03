@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import logoFooter from "../images/logob.png";
+import logoFooter from "../../images/logob.png";
 
 const FooterLogo = () => {
     const logoStyle = {

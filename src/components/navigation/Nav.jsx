@@ -1,8 +1,8 @@
 import { Badge, Container, IconButton } from "@mui/material"
 import { Box } from "@mui/system";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import logo from "../images/logo2.png";
-import "../styles/mainStyle.css";
+import logo from "../../images/logo2.png";
+import "../../styles/mainStyle.css";
 import { NavLink, Outlet } from "react-router-dom";
 import NavSearch from "./NavSearch";
 

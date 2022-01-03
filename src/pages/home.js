@@ -1,7 +1,7 @@
-import BestSells from "../components/BestSells";
-import Gamme from "../components/Gamme";
-import Header from "../components/Header";
-import NewsLetter from "../components/NewsLetter";
+import BestSells from "../components/homepage/BestSells";
+import Gamme from "../components/homepage/Gamme";
+import Header from "../components/homepage/Header";
+import NewsLetter from "../components/homepage/NewsLetter";
 
 const Home = (props) => {
     return (
