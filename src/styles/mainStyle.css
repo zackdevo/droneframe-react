@@ -10,7 +10,7 @@ body {
     width: 150px;
 }
 
-/* HOVER & ANIMS */
+/* HOVER & ANIMS  */
 
 .navLinks {
     font-size: 1.2rem;
@@ -44,4 +44,10 @@ body {
     0%, 100% {transform: translateX(0);} 
     10%, 30%, 50%, 70%, 90% {transform: translateX(0px);} 
     20%, 40%, 60%, 80% {transform: translateX(3px);} 
- }
+}
+
+.equipCat:hover a div, .servicesCat:hover a div {
+    display:flex;
+    color: white;
+    transition: 300ms;
+}
