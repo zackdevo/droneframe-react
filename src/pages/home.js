@@ -7,7 +7,7 @@ const Home = (props) => {
     return (
         <div>
             <Header />
-            <BestSells />
+            <BestSells addToCart={props.addToCart} />
             <Gamme />
             <NewsLetter />
         </div>

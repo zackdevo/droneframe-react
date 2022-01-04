@@ -5,13 +5,15 @@ import logo from "../../images/logo2.png";
 import "../../styles/mainStyle.css";
 import { NavLink, Outlet } from "react-router-dom";
 import NavSearch from "./NavSearch";
+import useModal from "./useModal";
+import ModalCart from "./Modal";
 
 const Nav = (props) => {
+    // Syle lien actif
     const isLinkActive = props.isLinkActive;
     //Compteur du panier
     let hasItems;
     const cartItems = props.cartItems.map((items, index) => {
-        console.log(items);
         return items
     })
     if (cartItems.length > 0) {
@@ -19,6 +21,7 @@ const Nav = (props) => {
     } else if (cartItems.length === 0) {
         hasItems = false
     }
+
     // Style pour la navbar
     const navStyle = {
         display: "flex",
@@ -31,6 +34,10 @@ const Nav = (props) => {
         zIndex: 5,
         width: "100%"
     }
+
+    // MODAL 
+
+    const { isShowing, toggle } = useModal();
     return (
 
         <Box sx={{ ...navStyle }}>
@@ -55,11 +62,12 @@ const Nav = (props) => {
                 }}>
 
                     <NavSearch />
-                    <IconButton aria-label="cart">
+                    <IconButton aria-label="cart" onClick={toggle}>
                         <Badge badgeContent={hasItems ? cartItems.length : null} color={hasItems ? "warning" : "success"}>
                             <ShoppingCartIcon />
                         </Badge>
                     </IconButton>
+                    <ModalCart cartItems={cartItems} isShowing={isShowing} hide={toggle} />
                 </Box>
                 <Outlet />
             </Container >

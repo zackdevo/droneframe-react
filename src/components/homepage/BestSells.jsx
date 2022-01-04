@@ -4,8 +4,7 @@ import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { getProducts } from "../../data"
 
-const BestSells = () => {
-
+const BestSells = (props) => {
     // GROSSE PARTIE STYLE DES ELEMENTS OUAI
     const buttonStyle = {
         marginBottom: "10px",
@@ -58,7 +57,7 @@ const BestSells = () => {
                     <Button sx={buttonStyle} className="addCartBtn" variant="outlined" endIcon={<ArrowForwardIosIcon className="iconBtn" />}>
                         Voir fiche produit
                     </Button>
-                    <Button sx={buttonStyle} className="addCartBtn" variant="outlined" endIcon={<ShoppingCartOutlinedIcon className="iconBtn" />}>
+                    <Button onClick={() => props.addToCart(drone)} sx={buttonStyle} className="addCartBtn" variant="outlined" endIcon={<ShoppingCartOutlinedIcon className="iconBtn" />}>
                         Ajouter au panier
                     </Button>
 

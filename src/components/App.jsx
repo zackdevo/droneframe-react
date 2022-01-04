@@ -8,26 +8,13 @@ import Nav from "./navigation/Nav";
 
 class App extends Component {
   state = {
-    cartItems: [{
-      id: "3",
-      drone: "1",
-      price: 258,
-    }, {
-      id: "4",
-      drone: "2",
-      price: 1455,
-    }
-    ]
+    cartItems: []
   }
   // Fonction pour ajouter au panier
-  AddToCard = (product) => {
-    const exist = this.state.cartItems.find(x => x.id === product.id);
-    if (exist) {
-      this.setState({
-        cartItems: [...this.state.cartItems, product]
-      })
-    }
-
+  addToCart = (drone) => {
+    this.setState({
+      cartItems: [...this.state.cartItems, drone]
+    })
   }
   // Fonction pour classe active sur les liens
   isLinkActive = ({ isActive }) => {
@@ -40,7 +27,7 @@ class App extends Component {
       <BrowserRouter>
         <Nav cartItems={this.state.cartItems} isLinkActive={this.isLinkActive} />
         <Routes>
-          <Route index element={<Home addToCart={this.AddToCard} />} />
+          <Route index element={<Home addToCart={this.addToCart} />} />
           <Route path="shop" element={<Shop />} />
         </Routes>
         <Footer />
