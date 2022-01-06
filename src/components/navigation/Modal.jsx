@@ -5,9 +5,14 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const ModalCart = ({ isShowing, hide, cartItems }) => {
 
+    const cartStyle = {
+        borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
+        padding: "10px 0",
+    }
+
     const cart = cartItems.map((item, index) => {
         return (
-            <Grid container key={index}>
+            <Grid sx={cartStyle} container key={index}>
                 <Grid item xs={12} md={4} sx={{ display: "flex" }}>
                     <Avatar variant="rounded" src={item.url}></Avatar>
                     <Typography>{item.name}</Typography>
@@ -16,7 +21,7 @@ const ModalCart = ({ isShowing, hide, cartItems }) => {
                     <Button sx={{ backgroundColor: "red" }}>-</Button>
                     <Button sx={{ backgroundColor: "blue" }}>+</Button>
                 </Grid>
-                {/* <Grid item xs={12} md={4}></Grid> */}
+                <Grid item xs={12} md={4}>{item.price}€ QTY : {item.qty}</Grid>
             </Grid >
         )
     })
@@ -81,8 +86,8 @@ const ModalCart = ({ isShowing, hide, cartItems }) => {
                             <Button onClick={hide}><CloseIcon fontSize="large" sx={iconsStyle} /></Button>
                         </Box>
                         <Divider sx={{ margin: "10px 0" }}></Divider>
-                        <Box sx={{ display: "flex" }}>
-                            {cartItems.length === 0 ? <p>Votre panier est vide</p> : cart}
+                        <Box sx={{ display: "block" }}>
+                            {cartItems.length === 0 ? <p>Votre panier est vide.</p> : cart}
                         </Box>
                     </Box>
                 </Box>

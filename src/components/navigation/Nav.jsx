@@ -21,6 +21,7 @@ const Nav = (props) => {
     } else if (cartItems.length === 0) {
         hasItems = false
     }
+    const total = cartItems.reduce((acc, obj) => { return acc + obj.qty; }, 0)
 
     // Style pour la navbar
     const navStyle = {
@@ -62,8 +63,8 @@ const Nav = (props) => {
                 }}>
 
                     <NavSearch />
-                    <IconButton aria-label="cart" onClick={toggle}>
-                        <Badge badgeContent={hasItems ? cartItems.length : null} color={hasItems ? "warning" : "success"}>
+                    <IconButton className="cartBtn" aria-label="cart" onClick={toggle}>
+                        <Badge badgeContent={hasItems ? total : null} color={hasItems ? "warning" : "success"}>
                             <ShoppingCartIcon />
                         </Badge>
                     </IconButton>

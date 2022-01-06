@@ -36,7 +36,7 @@ body {
     --d: 100%;
 }
 
-.favButton:hover svg, .searchBtn:hover svg {
+.favButton:hover svg, .searchBtn:hover svg, .cartBtn:hover svg {
     fill: #c080c0;
 }
 

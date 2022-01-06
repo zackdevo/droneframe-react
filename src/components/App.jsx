@@ -12,9 +12,17 @@ class App extends Component {
   }
   // Fonction pour ajouter au panier
   addToCart = (drone) => {
-    this.setState({
-      cartItems: [...this.state.cartItems, drone]
-    })
+    const exist = this.state.cartItems.find(item => item.id === drone.id)
+    if (exist) {
+      this.setState({
+        cartItems: this.state.cartItems.map((item) => item.id === drone.id ? { ...exist, qty: exist.qty + 1 } : item)
+      })
+    } else {
+      this.setState({
+        cartItems: [...this.state.cartItems, { ...drone, qty: 1 }]
+      })
+    }
+
   }
   // Fonction pour classe active sur les liens
   isLinkActive = ({ isActive }) => {
