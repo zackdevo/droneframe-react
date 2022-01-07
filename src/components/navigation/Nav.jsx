@@ -9,6 +9,8 @@ import useModal from "./useModal";
 import ModalCart from "./Modal";
 
 const Nav = (props) => {
+    const removeFromCart = props.removeFromCart;
+    const addToCart = props.addToCart;
     // Syle lien actif
     const isLinkActive = props.isLinkActive;
     //Compteur du panier
@@ -68,7 +70,7 @@ const Nav = (props) => {
                             <ShoppingCartIcon />
                         </Badge>
                     </IconButton>
-                    <ModalCart cartItems={cartItems} isShowing={isShowing} hide={toggle} />
+                    <ModalCart cartItems={cartItems} isShowing={isShowing} hide={toggle} addToCart={addToCart} removeFromCart={removeFromCart} />
                 </Box>
                 <Outlet />
             </Container >

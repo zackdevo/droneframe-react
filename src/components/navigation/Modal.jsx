@@ -1,28 +1,41 @@
-import { Avatar, Button, Divider, Grid, Typography } from "@mui/material"
-import { Box } from "@mui/system"
+import { Avatar, Button, Divider, Grid, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import ReactDOM from "react-dom";
 import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
-const ModalCart = ({ isShowing, hide, cartItems }) => {
+const ModalCart = ({ isShowing, hide, cartItems, addToCart, removeFromCart }) => {
 
     const cartStyle = {
         borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
         padding: "10px 0",
     }
+    const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
+    const cart = cartItems.map((item, id) => {
 
-    const cart = cartItems.map((item, index) => {
         return (
-            <Grid sx={cartStyle} container key={index}>
-                <Grid item xs={12} md={4} sx={{ display: "flex" }}>
-                    <Avatar variant="rounded" src={item.url}></Avatar>
-                    <Typography>{item.name}</Typography>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                    <Button sx={{ backgroundColor: "red" }}>-</Button>
-                    <Button sx={{ backgroundColor: "blue" }}>+</Button>
-                </Grid>
-                <Grid item xs={12} md={4}>{item.price}€ QTY : {item.qty}</Grid>
-            </Grid >
+            <div>
+                <Grid sx={cartStyle} container key={id}>
+                    <Grid item xs={12} md={4} sx={{ display: "flex", alignItems: "center" }}>
+                        <Avatar sx={{ marginRight: "5px" }} variant="rounded" src={item.url}></Avatar>
+                        <Typography>{item.name}</Typography>
+                    </Grid>
+                    <Grid item xs={12} md={4} sx={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
+                        <IconButton className="removeBtn">
+                            <RemoveCircleOutlineIcon onClick={() => removeFromCart(item)} />
+                        </IconButton>
+                        <IconButton className="addBtn" onClick={() => addToCart(item)} >
+                            <AddCircleOutlineIcon />
+                        </IconButton>
+                    </Grid>
+                    <Grid item xs={12} md={4} sx={{ textAlign: "center", display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
+                        <Typography sx={{ marginLeft: "10px" }}><strong>{item.price}€</strong></Typography>
+                        <Typography>QTÉ : {item.qty}</Typography>
+                    </Grid>
+                </Grid >
+            </div>
         )
     })
 
@@ -88,6 +101,7 @@ const ModalCart = ({ isShowing, hide, cartItems }) => {
                         <Divider sx={{ margin: "10px 0" }}></Divider>
                         <Box sx={{ display: "block" }}>
                             {cartItems.length === 0 ? <p>Votre panier est vide.</p> : cart}
+                            {cartItems.length !== 0 ? <Typography sx={{ textAlign: "center", marginTop: "5px" }}>Le prix total est de : <strong style={{ color: "#c080c0" }}>{totalPrice.toFixed(2)}€</strong></Typography> : null}
                         </Box>
                     </Box>
                 </Box>

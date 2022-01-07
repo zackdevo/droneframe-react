@@ -1,6 +1,5 @@
-import { Container, Box, Grid, IconButton, Typography, Divider, Button } from "@mui/material"
+import { Container, Box, Grid, Typography, Divider, Button } from "@mui/material"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { getProducts } from "../../data"
 
@@ -42,11 +41,8 @@ const BestSells = (props) => {
         return (
             <Grid className="card" sx={cardStyle} key={index} item xs={6} md={2.5}>
                 <img style={imgStyle} src={drone.url} alt={drone.name}></img>
-                <Box sx={{ display: "flex", justifyContent: "space-around", alignItems: "center" }}>
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <Typography variant="h6">{drone.name}</Typography>
-                    <IconButton className="favButton">
-                        <FavoriteRoundedIcon sx={{ color: "rgba(125, 119, 114, 0.5)" }} />
-                    </IconButton>
                 </Box >
                 <Divider sx={{ height: "10px", marginBottom: "5px" }} />
                 <Box>

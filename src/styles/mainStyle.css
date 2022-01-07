@@ -36,8 +36,21 @@ body {
     --d: 100%;
 }
 
-.favButton:hover svg, .searchBtn:hover svg, .cartBtn:hover svg {
+.searchBtn:hover svg{
     fill: #c080c0;
+}
+
+.removeBtn:hover svg, .removeBtn {
+    fill : red
+}
+.removeBtn:hover {
+    background-color: rgba(255, 0, 0, 0.120)!important;
+}
+.addBtn:hover svg {
+    fill : green;
+}
+.addBtn:hover {
+    background-color : rgba(0, 128, 0, 0.120)!important;
 }
 
 @keyframes shake {
