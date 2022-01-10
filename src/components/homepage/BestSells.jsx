@@ -2,25 +2,10 @@ import { Container, Box, Grid, Typography, Divider, Button } from "@mui/material
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { getProducts } from "../../data"
+import buttonStyle from "../../styles/buttonStyle";
 
 const BestSells = (props) => {
     // GROSSE PARTIE STYLE DES ELEMENTS OUAI
-    const buttonStyle = {
-        marginBottom: "10px",
-        backgroundColor: "rgba(36, 40, 52, 0.3)",
-        borderRadius: "20px",
-        border: "2px solid rgba(125, 119, 114, 0.8)",
-        color: "rgba(229, 229, 229, 0.70)",
-        "&:hover": {
-            color: "rgba(36, 40, 52, 0.6)",
-            backgroundColor: "rgba(229, 229, 229, 0.1)",
-            border: "2px solid rgba(36, 40, 52, 0.6) "
-        },
-        "&:hover .iconBtn": {
-            animation: "shake 2s linear infinite"
-        },
-        transition: "400ms"
-    }
 
     const imgStyle = {
         maxWidth: "100%",
@@ -36,7 +21,7 @@ const BestSells = (props) => {
     }
 
     // Data des drones
-    const bestDrones = getProducts()[0].drones;
+    const bestDrones = getProducts()[0].drones.slice(0, 4);
     const cards = bestDrones.map((drone, index) => {
         return (
             <Grid className="card" sx={cardStyle} key={index} item xs={6} md={2.5}>

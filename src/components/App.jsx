@@ -48,7 +48,7 @@ class App extends Component {
         <Nav cartItems={this.state.cartItems} isLinkActive={this.isLinkActive} addToCart={this.addToCart} removeFromCart={this.removeFromCart} />
         <Routes>
           <Route index element={<Home addToCart={this.addToCart} />} />
-          <Route path="shop" element={<Shop />} />
+          <Route path="shop" element={<Shop addToCart={this.addToCart} />} />
         </Routes>
         <Footer />
       </BrowserRouter >

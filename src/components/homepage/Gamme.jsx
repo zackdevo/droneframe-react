@@ -31,7 +31,7 @@ const Gamme = () => {
             </Box>
             <Grid sx={{ display: "flex", justifyContent: "center" }} container columnGap={2}>
                 <Grid className="equipCat" sx={{ backgroundImage: `url(${equipImage})`, ...catStyle }} item xs={12} md={5}>
-                    <Link to={"_blank"}>
+                    <Link to={"/shop#equip"}>
                         <Box sx={overlayStyle}>ÉQUIPEMENTS</Box>
                     </Link>
                 </Grid>

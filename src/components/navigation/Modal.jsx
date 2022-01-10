@@ -13,18 +13,18 @@ const ModalCart = ({ isShowing, hide, cartItems, addToCart, removeFromCart }) =>
         padding: "10px 0",
     }
     const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
-    const cart = cartItems.map((item, id) => {
+    const cart = cartItems.map((item, index) => {
 
         return (
-            <div>
-                <Grid sx={cartStyle} container key={id}>
+            <div key={index}>
+                <Grid sx={cartStyle} container>
                     <Grid item xs={12} md={4} sx={{ display: "flex", alignItems: "center" }}>
                         <Avatar sx={{ marginRight: "5px" }} variant="rounded" src={item.url}></Avatar>
                         <Typography>{item.name}</Typography>
                     </Grid>
                     <Grid item xs={12} md={4} sx={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
-                        <IconButton className="removeBtn">
-                            <RemoveCircleOutlineIcon onClick={() => removeFromCart(item)} />
+                        <IconButton className="removeBtn" onClick={() => removeFromCart(item)}>
+                            <RemoveCircleOutlineIcon />
                         </IconButton>
                         <IconButton className="addBtn" onClick={() => addToCart(item)} >
                             <AddCircleOutlineIcon />
