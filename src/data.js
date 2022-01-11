@@ -67,7 +67,7 @@ let products = [
             id: 8,
             name: "2 Batteries 440W",
             price: 199,
-            description: "Lot de deux batteries pour plus de temps de capture",
+            description: "Lot de deux batteries pour plus de temps de capture.",
             url: `${Battery}`
         }, {
             id: 9,

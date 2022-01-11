@@ -6,8 +6,7 @@ import SocialNetwork from "./SocialNetwork";
 const Footer = () => {
 
     const footerStyle = {
-        backgroundColor: "#604060",
-        marginTop: "40px"
+        backgroundColor: "#604060"
     }
 
     return (

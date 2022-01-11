@@ -2,7 +2,7 @@ import { Container, Box, Grid, Typography, Divider, Button } from "@mui/material
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { getProducts } from "../../data"
-import buttonStyle from "../../styles/buttonStyle";
+import { buttonStyle } from "../../styles/stylesVars";
 
 const BestSells = (props) => {
     // GROSSE PARTIE STYLE DES ELEMENTS OUAI

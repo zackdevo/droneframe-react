@@ -29,7 +29,7 @@ const Gamme = () => {
             <Box sx={{ textAlign: "center" }}>
                 <h2 style={{ fontFamily: "'Rhodium Libre', 'serif'" }}>Équipements &#38; et services</h2>
             </Box>
-            <Grid sx={{ display: "flex", justifyContent: "center" }} container columnGap={2}>
+            <Grid sx={{ display: "flex", justifyContent: "center" }} container columnGap={7}>
                 <Grid className="equipCat" sx={{ backgroundImage: `url(${equipImage})`, ...catStyle }} item xs={12} md={5}>
                     <Link to={"/shop#equip"}>
                         <Box sx={overlayStyle}>ÉQUIPEMENTS</Box>

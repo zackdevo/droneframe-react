@@ -2,7 +2,7 @@ import { Badge, Button, Container, Grid, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { getProducts } from "../../../data"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import buttonStyle from "../../../styles/buttonStyle";
+import { buttonStyle } from "../../../styles/stylesVars";
 
 const MainEquip = (props) => {
     const equipData = getProducts()[0].equipements

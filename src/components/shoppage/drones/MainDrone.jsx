@@ -2,7 +2,7 @@ import { Badge, Button, Container, Grid, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { getProducts } from "../../../data"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import buttonStyle from "../../../styles/buttonStyle";
+import { buttonStyle } from "../../../styles/stylesVars";
 const MainDrone = (props) => {
     const droneData = getProducts()[0].drones
     const mainDroneStyle = {
@@ -26,10 +26,8 @@ const MainDrone = (props) => {
     return (
         <Container>
             <Grid sx={{ marginTop: "20px" }} container>
-                <Grid sx={mainDroneStyle} item xs={6}>
-
-                </Grid>
-                <Grid sx={mainDroneDesc} item xs={6}>
+                <Grid sx={mainDroneStyle} item xs={12} md={6}></Grid>
+                <Grid sx={mainDroneDesc} item xs={12} md={6}>
                     <Box sx={{ margin: "60px 0", textAlign: "center" }}>
                         <Badge variant="string" badgeContent="Nouveau" color="success">
                             <Typography sx={mainDroneTitle} variant="h5">{droneData[5].name}</Typography>

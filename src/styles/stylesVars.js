@@ -1,4 +1,23 @@
-const buttonStyle = {
+export const iconStyle = {
+    fontSize: 60,
+}
+export const iconGridStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+}
+
+export const typoStyle = {
+    fontSize: "1.3rem",
+    textAlign: "justify",
+}
+
+export const linkMess = {
+    textDecoration: "none",
+    color: "#c080c0",
+}
+
+export const buttonStyle = {
     marginBottom: "10px",
     backgroundColor: "rgba(36, 40, 52, 0.3)",
     borderRadius: "20px",
@@ -14,5 +33,3 @@ const buttonStyle = {
     },
     transition: "400ms"
 }
-
-export default buttonStyle

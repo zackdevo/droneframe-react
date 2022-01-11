@@ -4,7 +4,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from "../../images/logo2.png";
 import "../../styles/mainStyle.css";
 import { NavLink, Outlet } from "react-router-dom";
-import NavSearch from "./NavSearch";
 import useModal from "./useModal";
 import ModalCart from "./Modal";
 
@@ -38,6 +37,12 @@ const Nav = (props) => {
         width: "100%"
     }
 
+    const iconsStyle = {
+        "&:hover": { fill: "#c080c0" },
+        transition: "300ms",
+        fontSize: 30
+    }
+
     // MODAL 
 
     const { isShowing, toggle } = useModal();
@@ -57,17 +62,15 @@ const Nav = (props) => {
                 }}>
                     <NavLink className="navLinks fading-1" style={isLinkActive} to="/">Accueil</NavLink>
                     <NavLink className="navLinks fading-1" style={isLinkActive} to="/shop">Boutique</NavLink>
-                    <NavLink className="navLinks fading-1" style={isLinkActive} to="/blank">Assistance</NavLink>
+                    <NavLink className="navLinks fading-1" style={isLinkActive} to="/assistance">Assistance</NavLink>
                 </Box>
                 <Box sx={{
                     display: "flex",
                     alignItems: "center"
                 }}>
-
-                    <NavSearch />
-                    <IconButton className="cartBtn" aria-label="cart" onClick={toggle}>
+                    <IconButton className="cartBtn" aria-label="cart" onClick={toggle} >
                         <Badge badgeContent={hasItems ? total : null} color={hasItems ? "warning" : "success"}>
-                            <ShoppingCartIcon />
+                            <ShoppingCartIcon sx={iconsStyle} />
                         </Badge>
                     </IconButton>
                     <ModalCart cartItems={cartItems} isShowing={isShowing} hide={toggle} addToCart={addToCart} removeFromCart={removeFromCart} />

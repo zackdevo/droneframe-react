@@ -5,7 +5,7 @@ import NewsForm from "./NewsForm";
 const NewsLetter = () => {
 
     const newsLetterStyle = {
-        marginTop: "50px",
+        margin: "50px 0",
         backgroundImage: `url(${newsLetterImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

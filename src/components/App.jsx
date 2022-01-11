@@ -5,10 +5,13 @@ import Home from "../pages/home";
 import Shop from "../pages/shop";
 import Footer from "./footer/Footer";
 import Nav from "./navigation/Nav";
+import Assistance from "../pages/assistance";
+import RespNav from "./navigation/RespNav";
 
 class App extends Component {
   state = {
-    cartItems: []
+    cartItems: [],
+    matches: window.matchMedia("(min-width: 768px)").matches
   }
   // Fonction pour ajouter au panier
   addToCart = (drone) => {
@@ -42,13 +45,22 @@ class App extends Component {
       color: isActive ? "#c080c0" : ""
     };
   }
+
+  // RESPONSIVE MEDIA QUERY 
+  componentDidMount() {
+    const handler = e => this.setState({ matches: e.matches });
+    window.matchMedia("(min-width: 768px)").addEventListener('change', handler);
+  }
+
   render() {
     return (
       <BrowserRouter>
-        <Nav cartItems={this.state.cartItems} isLinkActive={this.isLinkActive} addToCart={this.addToCart} removeFromCart={this.removeFromCart} />
+        {this.state.matches && (<Nav cartItems={this.state.cartItems} isLinkActive={this.isLinkActive} addToCart={this.addToCart} removeFromCart={this.removeFromCart} />)}
+        {!this.state.matches && (<RespNav />)}
         <Routes>
           <Route index element={<Home addToCart={this.addToCart} />} />
           <Route path="shop" element={<Shop addToCart={this.addToCart} />} />
+          <Route path="assistance" element={<Assistance />} />
         </Routes>
         <Footer />
       </BrowserRouter >
