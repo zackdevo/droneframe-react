@@ -36,7 +36,7 @@ const Gamme = () => {
                     </Link>
                 </Grid>
                 <Grid className="servicesCat" sx={{ backgroundImage: `url(${serviceImage})`, ...catStyle }} item xs={12} md={5}>
-                    <Link to={"_blank"}>
+                    <Link to={"/assistance"}>
                         <Box sx={overlayStyle}>SERVICES</Box>
                     </Link>
                 </Grid>

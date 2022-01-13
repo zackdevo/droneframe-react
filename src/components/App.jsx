@@ -56,7 +56,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         {this.state.matches && (<Nav cartItems={this.state.cartItems} isLinkActive={this.isLinkActive} addToCart={this.addToCart} removeFromCart={this.removeFromCart} />)}
-        {!this.state.matches && (<RespNav />)}
+        {!this.state.matches && (<RespNav cartItems={this.state.cartItems} isLinkActive={this.isLinkActive} addToCart={this.addToCart} removeFromCart={this.removeFromCart} />)}
         <Routes>
           <Route index element={<Home addToCart={this.addToCart} />} />
           <Route path="shop" element={<Shop addToCart={this.addToCart} />} />

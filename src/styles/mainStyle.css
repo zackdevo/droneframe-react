@@ -64,3 +64,15 @@ body {
     color: white;
     transition: 300ms;
 }
+
+/* RESPONSIVE STUFF */
+
+.respLogo {
+    width : 120px;
+    padding: 10px;
+}
+
+.navLinksRes {
+    color:rgba(125, 119, 114, 0.8);
+    text-decoration: none;
+}
