@@ -70,6 +70,17 @@ body {
 @media screen and (max-width : 798px) {
     #headerImg {
         background-position: center;
+        height : 350px
+    }
+
+    #headerTitle {
+        margin: 40px 0;
+        font-size: 1.5em;
+    }
+
+    #headerSubtitle {
+        padding-top: 30px;
+        font-size: 1.3em;
     }
 
     .card {
