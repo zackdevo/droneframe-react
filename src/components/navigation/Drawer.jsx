@@ -13,7 +13,9 @@ const Drawer = (props) => {
     return (
         <Container sx={{ padding: "10px", height: "100%" }}>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <img style={{ width: "120px" }} src={logo} alt="Logo DroneFrame" />
+                <a href="/">
+                    <img style={{ width: "120px" }} src={logo} alt="Logo DroneFrame" />
+                </a>
                 <IconButton onClick={() => { props.setIsShowed(false) }}>
                     <CloseOutlinedIcon sx={{ fontSize: 35 }} />
                 </IconButton>

@@ -5,7 +5,9 @@ import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 const Classic = (props) => {
     return (
         <Container sx={{ display: "flex", justifyContent: "space-between", padding: "10px" }}>
-            <img style={{ width: "120px" }} src={logo} alt="Logo DroneFrame" />
+            <a href="/">
+                <img style={{ width: "120px" }} src={logo} alt="Logo DroneFrame" />
+            </a>
             <IconButton onClick={() => { props.setIsShowed(true) }}>
                 <MenuOutlinedIcon sx={{ fontSize: 35 }} />
             </IconButton>

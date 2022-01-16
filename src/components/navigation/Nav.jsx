@@ -54,7 +54,9 @@ const Nav = (props) => {
                 justifyContent: "space-between"
             }}>
                 <Box>
-                    <img className="logo-site" alt="Logo DroneFrame" src={logo}></img>
+                    <a href="/">
+                        <img className="logo-site" alt="Logo DroneFrame" src={logo}></img>
+                    </a>
                 </Box>
                 <Box sx={{
                     display: "flex",
