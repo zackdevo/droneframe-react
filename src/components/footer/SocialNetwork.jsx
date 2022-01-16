@@ -13,7 +13,7 @@ const SocialNetwork = () => {
         fontSize: 40
     }
     return (
-        <Grid item xs={12} md={4} sx={{ padding: "20px", textAlign: "center" }}>
+        <Grid item xs={12} md={4} sx={{ padding: "20px 0", textAlign: "center" }}>
             <Typography sx={{ color: "white", fontSize: "1.1rem " }}>Rejoignez-nous sur nos réseaux sociaux</Typography>
             <Box sx={{ marginTop: "10px", display: "flex", justifyContent: "space-around" }} >
                 <a href="http://" target="_blank" rel="noopener noreferrer" ><InstagramIcon sx={iconsStyle} /></a>

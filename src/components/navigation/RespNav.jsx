@@ -31,6 +31,7 @@ const RespNav = (props) => {
         zIndex: 5,
         width: "100%",
         alignItems: "center",
+        padding: "10px 0"
     }
 
     const [isShowed, setIsShowed] = useState(false);

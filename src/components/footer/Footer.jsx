@@ -1,4 +1,5 @@
 import { Container, Grid } from "@mui/material";
+import { Box } from "@mui/system";
 import FooterAccordion from "./FooterAccordion";
 import FooterLogo from "./FooterLogo";
 import SocialNetwork from "./SocialNetwork";
@@ -10,13 +11,15 @@ const Footer = () => {
     }
 
     return (
-        <Grid container sx={footerStyle}>
+        <Box sx={footerStyle}>
             <Container sx={{ display: "flex", justifyContent: "space-between" }}>
-                <FooterAccordion />
-                <FooterLogo />
-                <SocialNetwork />
+                <Grid container>
+                    <FooterAccordion />
+                    <FooterLogo />
+                    <SocialNetwork />
+                </Grid>
             </Container >
-        </Grid >
+        </Box>
     )
 }
 

@@ -10,21 +10,22 @@ const BestSells = (props) => {
     const imgStyle = {
         maxWidth: "100%",
         borderRadius: "0% 0% 30% 30%",
-        width: "100 %",
+        width: "100%",
     }
     const cardStyle = {
         border: "1px solid rgba(125, 119, 114, 0.3)",
         borderRadius: "0% 0% 10% 10%",
         textAlign: "center",
         transition: "1.1s",
-        maxWidth: "100%!important"
+        maxWidth: "100%!important",
+        marginBottom: "10px"
     }
 
     // Data des drones
     const bestDrones = getProducts()[0].drones.slice(0, 4);
     const cards = bestDrones.map((drone, index) => {
         return (
-            <Grid className="card" sx={cardStyle} key={index} item xs={6} md={2.5}>
+            <Grid className="card" sx={cardStyle} key={index} item xs={10} md={2.5}>
                 <img style={imgStyle} src={drone.url} alt={drone.name}></img>
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                     <Typography variant="h6">{drone.name}</Typography>

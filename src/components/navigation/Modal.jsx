@@ -18,11 +18,11 @@ const ModalCart = ({ isShowing, hide, cartItems, addToCart, removeFromCart }) =>
         return (
             <div key={index}>
                 <Grid sx={cartStyle} container>
-                    <Grid item xs={12} md={4} sx={{ display: "flex", alignItems: "center" }}>
+                    <Grid item xs={6} md={4} sx={{ display: "flex", alignItems: "center" }}>
                         <Avatar sx={{ marginRight: "5px" }} variant="rounded" src={item.url}></Avatar>
                         <Typography>{item.name}</Typography>
                     </Grid>
-                    <Grid item xs={12} md={4} sx={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
+                    <Grid item xs={6} md={4} sx={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
                         <IconButton className="removeBtn" onClick={() => removeFromCart(item)}>
                             <RemoveCircleOutlineIcon />
                         </IconButton>
@@ -30,7 +30,7 @@ const ModalCart = ({ isShowing, hide, cartItems, addToCart, removeFromCart }) =>
                             <AddCircleOutlineIcon />
                         </IconButton>
                     </Grid>
-                    <Grid item xs={12} md={4} sx={{ textAlign: "center", display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
+                    <Grid id="cartFooter" item xs={12} md={4} sx={{ textAlign: "center", display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
                         <Typography sx={{ marginLeft: "10px" }}><strong>{item.price}€</strong></Typography>
                         <Typography>QTÉ : {item.qty}</Typography>
                     </Grid>

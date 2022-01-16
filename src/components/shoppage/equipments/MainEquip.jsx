@@ -11,8 +11,6 @@ const MainEquip = (props) => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        height: "400px",
-
     }
 
     const mainEquipDesc = {
@@ -26,8 +24,8 @@ const MainEquip = (props) => {
     return (
         <Container id="equip">
             <Grid sx={{ marginTop: "20px" }} container>
-                <Grid sx={mainEquipDesc} item xs={6}>
-                    <Box sx={{ margin: "60px 0", textAlign: "center" }}>
+                <Grid sx={mainEquipDesc} item xs={12} md={6}>
+                    <Box sx={{ margin: "40px 0", textAlign: "center" }}>
                         <Badge sx={{ top: "10px", right: "-20px" }} variant="string" badgeContent="Nouveau" color="success">
                             <Typography sx={mainEquipTitle} variant="h5">{equipData[4].name}</Typography>
                         </Badge>
@@ -43,7 +41,7 @@ const MainEquip = (props) => {
                     </Box>
 
                 </Grid>
-                <Grid sx={mainEquipStyle} item xs={6}></Grid>
+                <Grid className="mainEquipImg" sx={mainEquipStyle} item xs={12} md={6}></Grid>
             </Grid>
         </Container>
     )

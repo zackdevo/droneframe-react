@@ -67,6 +67,33 @@ body {
 
 /* RESPONSIVE STUFF */
 
+@media screen and (max-width : 798px) {
+    #headerImg {
+        background-position: center;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .equipCat a div, .servicesCat a div {
+        display:flex;
+        color: white;
+    }
+
+    .mainDroneImg, .mainEquipImg {
+        height : 300px;
+    }
+    .dronesCardImg, .equipsCardImg {
+        height : 150px;
+    }
+
+    #cartFooter {
+        justify-content: space-evenly;
+    }
+
+}
+
 .respLogo {
     width : 120px;
     padding: 10px;

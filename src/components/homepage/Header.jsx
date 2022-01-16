@@ -13,7 +13,7 @@ const Header = () => {
         zIndex: 1,
     }
     return (
-        <Box sx={headerStyle}>
+        <Box id="headerImg" sx={headerStyle}>
             <div style={{ paddingTop: "30px" }}>
                 <h1 style={{
                     marginTop: '0',

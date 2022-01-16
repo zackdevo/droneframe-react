@@ -7,6 +7,8 @@ const Gamme = () => {
     const catStyle = {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        margin: "20px 0",
         height: "400px",
         display: "flex",
         position: "relative"
@@ -27,7 +29,7 @@ const Gamme = () => {
     return (
         <Container>
             <Box sx={{ textAlign: "center" }}>
-                <h2 style={{ fontFamily: "'Rhodium Libre', 'serif'" }}>Équipements &#38; et services</h2>
+                <h2 style={{ fontFamily: "'Rhodium Libre', 'serif'" }}>Équipements &#38; services</h2>
             </Box>
             <Grid sx={{ display: "flex", justifyContent: "center" }} container columnGap={7}>
                 <Grid className="equipCat" sx={{ backgroundImage: `url(${equipImage})`, ...catStyle }} item xs={12} md={5}>
