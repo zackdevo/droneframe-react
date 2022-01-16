@@ -36,13 +36,9 @@ const BestSells = (props) => {
                     <Typography paragraph sx={{ fontWeight: "bold" }}>{drone.price}€</Typography>
                 </Box>
                 <Box>
-                    <Button sx={buttonStyle} className="addCartBtn" variant="outlined" endIcon={<ArrowForwardIosIcon className="iconBtn" />}>
-                        Voir fiche produit
-                    </Button>
                     <Button onClick={() => props.addToCart(drone)} sx={buttonStyle} className="addCartBtn" variant="outlined" endIcon={<ShoppingCartOutlinedIcon className="iconBtn" />}>
                         Ajouter au panier
                     </Button>
-
                 </Box>
             </Grid >
         )
