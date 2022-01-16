@@ -3,7 +3,7 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { Box } from "@mui/system"
 import logo from "../../images/logo2.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ModalCart from "./Modal";
 import useModal from "./useModal";
 
@@ -13,9 +13,9 @@ const Drawer = (props) => {
     return (
         <Container sx={{ padding: "10px", height: "100%" }}>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                <a href="/">
+                <Link to="/">
                     <img style={{ width: "120px" }} src={logo} alt="Logo DroneFrame" />
-                </a>
+                </Link>
                 <IconButton onClick={() => { props.setIsShowed(false) }}>
                     <CloseOutlinedIcon sx={{ fontSize: 35 }} />
                 </IconButton>

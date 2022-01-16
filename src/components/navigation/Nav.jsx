@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from "../../images/logo2.png";
 import "../../styles/mainStyle.css";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import useModal from "./useModal";
 import ModalCart from "./Modal";
 
@@ -54,9 +54,9 @@ const Nav = (props) => {
                 justifyContent: "space-between"
             }}>
                 <Box>
-                    <a href="/">
+                    <Link to="/">
                         <img className="logo-site" alt="Logo DroneFrame" src={logo}></img>
-                    </a>
+                    </Link>
                 </Box>
                 <Box sx={{
                     display: "flex",
